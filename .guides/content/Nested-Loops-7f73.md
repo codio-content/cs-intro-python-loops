@@ -51,7 +51,7 @@ Using nested loops, write some code that outputs the following:
 ```
 
 [Code Visualizer](open_tutor code/loops/playground-nested-loops.py)
-{Try it}(python3 code/loops/playground-nested-loops.py 2)
+{Try it}(python3 code/loops/playground-nested-loops.py 3)
 <details><summary>**Hint**</summary>The output is a `#` when the outer loop variable is even (0, 2, 4) and a `*` when the outer loop variable is odd (1, 3).</details>
 
 ### Nested Loop Coding Challenge 3
@@ -66,7 +66,7 @@ Using nested loops, write some code that outputs the following:
 ```
 
 [Code Visualizer](open_tutor code/loops/playground-nested-loops.py)
-{Try it}(python3 code/loops/playground-nested-loops.py 3)
+{Try it}(python3 code/loops/playground-nested-loops.py 4)
 <details><summary>**Hint**</summary>First, the outer loop does not start with 0. Second, the inner loop runs the same amount of times as the row number. Third, think back to the unit on operators. There is an operator that can repeat a string.</details>
 
 {Check It!|assessment}(multiple-choice-3201003218)

@@ -42,4 +42,7 @@ Go ahead and get comfortable creating and moving a turtle around the screen befo
 Click the button below to run your code. You may have noticed that there is no `print` command used with turtle objects, so the output of your program does not appear as you would expect. Look for the tab that reads **Preview https/...** and click on it. You should see your turtle drawing there. Close the window with the turtle output to stop your program.
 |||
 
-{Try it|terminal}(sh .guides/bg.sh python3 code/loops/playground-turtle-1.py)
+{Try it}(bash .guides/bg.sh python3 code/loops/playground-turtle-1.py)
+
+{Check It!|assessment}(multiple-choice-3982525010)
+

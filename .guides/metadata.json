@@ -100,7 +100,7 @@
      "action": "open"
     }
    ],
-   "layout": "3-columns",
+   "layout": "3-cell",
    "path": [],
    "type": "markdown",
    "content-file": ".guides/content/Turtle-Coding---For-Loop-8c98.md",
@@ -194,7 +194,7 @@
      "action": "open"
     },
     {
-     "path": "code/loops/playground-turtle-3.py",
+     "path": "code/loops/playground-turtle-2.py",
      "panel": 0,
      "action": "open"
     }

@@ -9315,7 +9315,7 @@
    "name": "formative assessment while loops",
    "showName": false,
    "instructions": "Fill in the blanks below so that the loop prints `Python` ten times.",
-   "text": "<<<count>>> = 0\nwhile count <<<<>>> 10:\n    print(\"Python\")\n    count = count <<<+>>> 1",
+   "text": "```python\n<<<count>>> = 0\nwhile count <<<<>>> 10:\n    print(\"Python\")\n    count = count <<<+>>> 1\n```",
    "guidance": "The first blank is `count`. You know this because in the while loop, Python is determining if `count` is less than 10. The second blank is `<`. Other boolean operators like `>` or `==` will not work. The condition would be false, and `Python` would not print. The third blank is `+`. The only way for this loop to end is for `count` to be greater than or equal to 10. Since `count` starts at 0, the variable must be incremented.\n\n```python\ncount = 0\nwhile count < 10:\n    print(\"Python\")\n    count = count + 1\n```",
    "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
@@ -9352,12 +9352,13 @@
      "+"
     ],
     "text": [
+     "```python\n",
      0,
      " = 0\nwhile count ",
      0,
      " 10:\n    print(\"Python\")\n    count = count ",
      0,
-     " 1"
+     " 1\n```"
     ]
    }
   }
@@ -9676,6 +9677,201 @@
    },
    "bloomsObjectiveLevel": "2",
    "learningObjectives": "SWBAT determine how many times a for loop will run"
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-3982525010",
+  "source": {
+   "name": "turtle graphics loop question",
+   "showName": false,
+   "instructions": "## Reading Question\n\nWhat is wrong with the code below?\n\n```python\nfor i in range(10):\nprint(\"Hello world\")\n```",
+   "multipleResponse": false,
+   "answers": [
+    {
+     "_id": "6d4cd2a5-97ea-ddba-19d3-826f312f2a9a",
+     "correct": false,
+     "answer": "Nothing, the code is perfect."
+    },
+    {
+     "_id": "29aa5db1-5b98-af48-b4a2-0e1e27d1f96d",
+     "correct": false,
+     "answer": "Change the loop to `for i in list(10):`."
+    },
+    {
+     "_id": "a12dd945-7389-2255-7f90-96cff8ae456e",
+     "correct": false,
+     "answer": "Change the loop to `for i in sequence(10):`."
+    },
+    {
+     "_id": "3a9c0100-92f8-2ee5-1e19-c2787d96b2c7",
+     "correct": true,
+     "answer": "The `print` statement needs to be indented."
+    }
+   ],
+   "guidance": "Code that is a part of the loop (like the `print` statement) needs to be indented. For loops in Python can use the keyword `range`, but they do not use `list` or `sequence`.",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Content",
+      "value": "Loops"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "Category",
+      "value": "For loops"
+     }
+    ],
+    "files": [
+     "code/loops/playground-turtle-1.py"
+    ],
+    "opened": [
+     {
+      "type": "preview",
+      "panelNumber": 1,
+      "content": "https://{{domain3000}}/"
+     },
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/loops/playground-turtle-1.py"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT create a for loop"
+  }
+ },
+ {
+  "type": "fill-in-the-blanks",
+  "taskId": "fill-in-the-blanks-1775886763",
+  "source": {
+   "name": "for loop range question",
+   "showName": false,
+   "instructions": "## Reading Question\n\nFill in the blanks below so that the loop outputs the following:\n\n```python\n0\n2\n4\n6\n8\n```",
+   "text": "```python\nfor i in range(<<<0>>>, <<<10>>>, <<<2>>>):\n  print(i)\n```",
+   "guidance": "The correct answer is:\n\n```python\nfor i in range(0, 10, 2):\n  print(i)\n```\nThe three numbers in the `range` statement determine the starting point for counting (the first number), the number to which the loop will count (the second number), and the increment used when counting (the third number). The first number is inclusive (which is why the loop prints 0), and the second number is not inclusive (which is why the loop does not print 10).\n",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "showValues": false,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Fill in the Blanks"
+     },
+     {
+      "name": "Content",
+      "value": "Loops"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "Category",
+      "value": "For loops"
+     }
+    ],
+    "files": [
+     "code/loops/playground-turtle-2.py"
+    ],
+    "opened": [
+     {
+      "type": "preview",
+      "panelNumber": 1,
+      "content": "https://{{domain3000}}/"
+     },
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/loops/playground-turtle-2.py"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT create a for loop that counts by 2",
+   "tokens": {
+    "blank": [
+     "0",
+     "10",
+     "2"
+    ],
+    "text": [
+     "```python\nfor i in range(",
+     0,
+     ", ",
+     0,
+     ", ",
+     0,
+     "):\n  print(i)\n```"
+    ]
+   }
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-1704139803",
+  "source": {
+   "name": "while loop (turtle) question",
+   "showName": false,
+   "instructions": "## Reading Question\n\nRearrange the code blocks below to create a working while loop. **Note**, this loops doesn't actually do anything.",
+   "initial": "my_var = 0\nwhile my_var < 10:\n  my_var += 1",
+   "options": "{\n  \"sortableId\":\"sortable\"\n}",
+   "grader": "",
+   "guidance": "The correct answer is:\n\n```python\nmy_var = 0\nwhile my_var < 10:\n  my_var += 1\n```\n\nThe variable used in the loop must be declared before the loop begins. The comes the loop. Inside the loop, the variable needs to change such that the loop condition becomes false. In this case, `my_var` must get bigger or it will never be greater than 10. Failure to create a false loop condition will create an infinite loop.",
+   "showGuidanceAfterResponse": true,
+   "points": 1,
+   "oneTimeTest": false,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Loops"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "Category",
+      "value": "While loops"
+     }
+    ],
+    "files": [
+     "code/loops/playground-turtle-2.py"
+    ],
+    "opened": [
+     {
+      "type": "preview",
+      "panelNumber": 1,
+      "content": "https://{{domain3000}}/"
+     },
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/loops/playground-turtle-2.py"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT create a while loop"
   }
  }
 ]
