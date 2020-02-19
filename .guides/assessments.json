@@ -500,7 +500,7 @@
   "source": {
    "name": "While Predicates",
    "showName": false,
-   "instructions": "## While predicates\nTrue of False: the following code snippet is valid for a while loop.\n\n```python\nwhile True\n```",
+   "instructions": "## While predicates\nTrue of False: the following code snippet is valid for a while loop.\n\n```python\nwhile True:\n```",
    "multipleResponse": false,
    "answers": [
     {
@@ -514,7 +514,7 @@
      "answer": "False"
     }
    ],
-   "guidance": "`while True` is a valid statement.",
+   "guidance": "`while True:` is a valid statement. It will create an infinite loop, so be sure to use a `break` statement in the body of the loop.",
    "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
    "points": 1,
@@ -530,8 +530,16 @@
       "value": "Python"
      }
     ],
-    "files": [],
-    "opened": []
+    "files": [
+     "code/loops/lab-while-loop.py"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/loops/lab-while-loop.py"
+     }
+    ]
    },
    "bloomsObjectiveLevel": "2",
    "learningObjectives": "SWBAT recognize the validity of `while True`"
@@ -663,8 +671,8 @@
    "name": "Exercise 1",
    "showName": false,
    "instructions": "## Drawing with turtle graphics\n\nRearrange the code blocks below to draw a triangle. Click on the **Model Drawing** to see the turtle animation.",
-   "initial": "t = turtle.Turtle()\n\nfor i in range(3):\n    t.forward(100)\n    t.lt(120)",
-   "options": "{\n  \"sortableId\": \"sortable\",\n  \"trashId\": \"sortableTrash\",\n  \"max_wrong_lines\": 1,\n  \"turtleModelCode\": \"modelTurtle.forward(100)\\nmodelTurtle.left(120)\\nmodelTurtle.forward(100)\\nmodelTurtle.left(120)\\nmodelTurtle.forward(100)\\nmodelTurtle.left(120)\",\n  \"grader\": \"ParsonsWidget._graders.TurtleGrader\",\n  \"executable_code\": \"for i in range(0,3):\\nmyTurtle.forward(100)\\nmyTurtle.left(120)\\npass\",\n  \"programmingLang\": \"pseudo\"\n}",
+   "initial": "t = turtle.Turtle()\nfor i in range(3):\n    t.forward(100)\n    t.lt(120)",
+   "options": "{\n  \"sortableId\": \"sortable\",\n  \"turtleModelCode\": \"modelTurtle.forward(100)\\nmodelTurtle.left(120)\\nmodelTurtle.forward(100)\\nmodelTurtle.left(120)\\nmodelTurtle.forward(100)\\nmodelTurtle.left(120)\",\n  \"grader\": \"ParsonsWidget._graders.TurtleGrader\",\n  \"executable_code\": \"for i in range(3):\\nmyTurtle.forward(100)\\nmyTurtle.left(120)\\npass\",\n  \"programmingLang\": \"pseudo\"\n}",
    "grader": "5",
    "guidance": "The first thing to do is to declare the variable `t` as a Turtle object. Then start the loop. In the model drawing, the turtle advances forward before turning. Use the `forward` block before the `lt` block. Don't forget to indent the commands that are a part of the loop.\n\n```python\nt = turtle.Turtle()\nfor i in range(3):\n    t.forward(100)\n    t.lt(120)\n```",
    "showGuidanceAfterResponse": true,
@@ -751,7 +759,7 @@
    "name": "While loop",
    "showName": false,
    "instructions": "## Create a while loop\nFrom the code blocks below, create a while loop that will iterate ten times. **Note:** not all code blocks will be used.",
-   "initial": "\ncount = 0\nwhile count < 10:\n    count = count + 1\ncount = 1 #distractor\nwhile count < range(10): #distractor\n    count = count #distractor",
+   "initial": "count = 0\nwhile count < 10:\n    count = count + 1\ncount = 1 #distractor\nwhile count < range(10): #distractor\n    count = count #distractor",
    "options": "{\n  \"sortableId\": \"sortable\",\n  \"trashId\": \"sortableTrash\"\n}",
    "grader": "",
    "guidance": "Start by creating the variable `count` and setting its value to 0. If you set its value to 1, the loop will not run 10 times. Use the line `while count < 10` for the loop. While loops do not use the `range` keyword; for loops do. Finally, `count` needs to increase so that this is not an infinite loop. Use the code block `count = count + 1`.\n\n```python\ncount = 0\nwhile count < 10:\n    count = count + 1\n```",
@@ -781,7 +789,7 @@
    "instructions": "## While loop\nUsing `while True:`, create a loop that prints the sum of all the numbers between 0 and 100. **Note:** the sum should include the number 100.",
    "command": "python3 code/loops/exercise-3.py",
    "preExecuteCommand": "",
-   "guidance": "There are several ways to solve this problem. Here is one of them. You will need two variables; one for the while loop and another for the total. Declare `total` and `count` and set them both to 0. The loop needs to include the number 100. That means the loop should run as long as `count` is less than 101. The `total` variable is assigned itself plus the value of `count`. Finally, increment `count` by 1.\n\n```python\ntotal = 0\ncount = 0\nwhile count < 101:\n  total = total + count\n  count += 1\nprint(total)\n```",
+   "guidance": "There are several ways to solve this problem. Here is one of them. You will need two variables; one for the while loop and another for the total. Declare `total` and `count` and set them both to 0. The loop needs to include the number 100. That means the loop should run until `count` is greater than 100. The `total` variable is assigned itself plus the value of `count`. Finally, increment `count` by 1.\n\n```python\ntotal = 0\ncount = 0\nwhile True:\n  if count > 100:\n    break\n  else:\n    total = total + count\n    count += 1\nprint(total)\n```",
    "showGuidanceAfterResponse": true,
    "points": 1,
    "oneTimeTest": true,
@@ -833,14 +841,14 @@
   "type": "parsons-puzzle",
   "taskId": "parsons-puzzle-1303194131",
   "source": {
-   "name": "Turtle Graphic",
+   "name": "loops coding exercise 4",
    "showName": false,
    "instructions": "## Turtle graphic\nRearrange the code blocks below so that their output would be the image above. If you need to practice, use the code editor to the left and press the `TRY IT` button to see your output in the tab entitled `Preview https:/...`. **Note:** it is not important that your colors match.",
-   "initial": "for j in range(4):\n    for i in range(4):\n        t.forward(50)\n        t.rt(90)\n    t.forward(100)\nfor i in range(4):\n        t.forward(50)\n        t.rt(90)",
-   "options": "{\n  \"sortableId\": \"sortable\",\n  \"trashId\": \"sortableTrash\"\n}",
+   "initial": "for outer_loop in range(4):\n    for inner_loop in range(4):\n        t.forward(50)\n        t.rt(90)\n    t.forward(100)\nfor last_loop in range(4):\n        t.forward(50)\n        t.rt(90)",
+   "options": "{\n  \"sortableId\": \"sortable\"\n}",
    "grader": "",
-   "guidance": "",
-   "showGuidanceAfterResponse": false,
+   "guidance": "Here is the solution:\n\n```python\nfor outer_loop in range(4):\n    for inner_loop in range(4):\n        t.forward(50)\n        t.rt(90)\n    t.forward(100)\nfor last_loop in range(4):\n        t.forward(50)\n        t.rt(90)\n```\n\nThe solution uses a nested loop because there is a square (inner loop) and the square is repeated (outer loop). However, there is a third loop (the last loop) to draw the final square.",
+   "showGuidanceAfterResponse": true,
    "points": 1,
    "oneTimeTest": true,
    "metadata": {
@@ -852,21 +860,30 @@
      {
       "name": "Programming Language",
       "value": "Python"
+     },
+     {
+      "name": "Content",
+      "value": "Loops"
+     },
+     {
+      "name": "Category",
+      "value": "Nested loops, Turtle"
      }
     ],
     "files": [
+     "code/loops/exercise-4.py",
      "code/exercise-4.py"
     ],
     "opened": [
      {
       "type": "preview",
-      "panelNumber": 0,
+      "panelNumber": 1,
       "content": "https://{{domain3000}}/"
      },
      {
       "type": "file",
       "panelNumber": 0,
-      "content": "code/exercise-4.py"
+      "content": "code/loops/exercise-4.py"
      }
     ]
    },
@@ -9872,6 +9889,163 @@
    },
    "bloomsObjectiveLevel": "2",
    "learningObjectives": "SWBAT create a while loop"
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-4026876358",
+  "source": {
+   "name": "code test lab challenge",
+   "showName": false,
+   "instructions": "Submit your code when ready",
+   "command": "python3 .guides/secure/unit_tests/loops/lab_challenge_helper.py",
+   "arePartialPointsAllowed": false,
+   "timeoutSeconds": 40,
+   "guidance": "This problem is tricky in that there are two sets of alternating output. Within a row, the output alternates between `X` and `O`. Then each row itself alternates between starting with `X` or starting with `O`. The alternating pattern will be handled by asking if a number modulo 2 returns 0. That is, if a number is odd do one thing, if the number is even do something else.\n\nStart by creating the outer loop with `row` as the index. Use an if-else statement to determine if `row` is even or odd.\n\n```python\nfor row in range(8):\n  if row % 2 == 0:\n\n  else:\n```\n\nPrinting a row of characters requires another loop, this time with the index `column`. The first row starts with `X` and then prints `O`. So if `column` is even print an `X` and if it is odd print `O`.\n\n```python\nfor row in range(8):\n  if row % 2 == 0:\n    for column in range(8):\n      if column % 2 == 0:\n        print(\"X\", end='')\n      else:\n        print(\"O\", end='')\n    print()\n  else:\n```\n\nIf `row` is odd you are going copy/paste the loop with `column` but be sure to change the order of `X` and `O`.\n\n```python\nfor row in range(8):\n  if row % 2 == 0:\n    for column in range(8):\n      if column % 2 == 0:\n        print(\"X\", end='')\n      else:\n        print(\"O\", end='')\n    print()\n  else:\n    for column in range(8):\n      if column % 2 == 0:\n        print(\"O\", end='')\n      else:\n        print(\"X\", end='')\n    print()\n```",
+   "showGuidanceAfterResponse": true,
+   "points": 1,
+   "oneTimeTest": false,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Loops"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "Category",
+      "value": "Fr loop, Conditionals"
+     }
+    ],
+    "files": [
+     "code/loops/lab-challenge.py"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/loops/lab-challenge.py"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "6",
+   "learningObjectives": "SWBAT use loops and conditionals to make a repeating pattern"
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-3865028352",
+  "source": {
+   "name": "loops coding exercise 1",
+   "showName": false,
+   "instructions": "## Coding Exercise\n\nImagine that you have a Turtle object called `t`. You want it to draw the triangle below. What are the commands that would go inside of the loop to draw the triangle?\n\n![Turtle Gif](.guides/images/turtle2.gif)",
+   "multipleResponse": false,
+   "answers": [
+    {
+     "_id": "6c752904-0630-636e-8c76-08e06f4dcf94",
+     "correct": false,
+     "answer": "```python\nt.lt(120)\nt.forward(100)\n```"
+    },
+    {
+     "_id": "49302329-a695-9e33-6484-99348dec40f4",
+     "correct": false,
+     "answer": "```python\nt.forward(100)\nt.rt(120)\n```"
+    },
+    {
+     "_id": "adb05b7f-e8f6-8696-203f-b05cf4fb55d0",
+     "correct": false,
+     "answer": "```python\nt.backward(100)\nt.lt(120)\n```"
+    },
+    {
+     "_id": "d6d8fd4e-7255-47ad-a39b-0a0a05348724",
+     "correct": true,
+     "answer": "```python\nt.forward(100)\nt.lt(120)\n```"
+    }
+   ],
+   "guidance": "The correct answer is:\n\n```python\nt.forward(100)\nt.lt(120)\n```\n\nIn the GIF, the turtle moves forward and then to the left. The other options would draw a triangle in a different orientation.",
+   "showGuidanceAfterResponse": false,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Content",
+      "value": "Loops"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "Category",
+      "value": "Turtle"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "4",
+   "learningObjectives": "SWBAT recognize the pattern that goes inside a loop"
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-3508204061",
+  "source": {
+   "name": "loops coding exercise 3",
+   "showName": false,
+   "instructions": "Submit your code when ready",
+   "command": "python3 .guides/secure/unit_tests/loops/exercise3_helper.py",
+   "arePartialPointsAllowed": false,
+   "timeoutSeconds": 40,
+   "guidance": "There are several ways to solve this problem. Here is one of them. You will need two variables; one for the while loop and another for the total. Declare `total` and `count` and set them both to 0. The loop needs to include the number 100. That means the loop should run until `count` is greater than 100. The `total` variable is assigned itself plus the value of `count`. Finally, increment `count` by 1.\n\n```python\ntotal = 0\ncount = 0\nwhile True:\n  if count > 100:\n    break\n  else:\n    total = total + count\n    count += 1\nprint(total)\n```",
+   "showGuidanceAfterResponse": true,
+   "points": 1,
+   "oneTimeTest": false,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Loops"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "Category",
+      "value": "While loop, break"
+     }
+    ],
+    "files": [
+     "code/loops/exercise-3.py"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/loops/exercise-3.py"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "6",
+   "learningObjectives": "SWBAT create a while true loop that breaks when a certain condition is met"
   }
  }
 ]
