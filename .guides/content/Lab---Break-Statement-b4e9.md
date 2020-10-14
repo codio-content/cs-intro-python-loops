@@ -1,7 +1,10 @@
 ## Tutorial Lab 4: Breaking from the while loop
 Use the text editor open in the left pane, and enter the following code:
 
-<details><summary>What does `inp = input('> ')` mean?</summary>The `input` command will wait for the user to type some information into the terminal and press `return`. `input` takes an string argument which will be displayed for the user. The information entered by the user is stored in the variable `inp`. All information entered for the `input` command will be stored as a string (even if you type a number).</details>
+<details>
+  <summary><strong>What does <code>inp = input('> ')</code> mean?</strong></summary>
+  The <code>input</code> command will wait for the user to type some information into the terminal and press <code>return</code>. <code>input</code> takes an string argument which will be displayed for the user. The information entered by the user is stored in the variable <code>inp</code>. All information entered for the <code>input</code> command will be stored as a string (even if you type a number).
+</details>
 
 ```python
 result = 0
