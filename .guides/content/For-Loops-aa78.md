@@ -50,6 +50,9 @@ The loop ran five times, but the variable `i` did not start with 1. Instead it s
 [Code Visualizer](open_tutor code/loops/playground-for-loop.py)
 {Try it}(python3 code/loops/playground-for-loop.py 4)
 
-<details><summary>**The 3rd Number in `range`**</summary>The range statement normall works with two numbers, where it starts counting and where it ends. The two examples above show that the range statement can take a third number. This number tells `range` the amount to increment. Adding a `2` will mean that `range` counts by 2. Add a negative number and `range` will count down. In this case, be sure that the first number is larger than the second.
+<details>
+  <summary><strong>The 3rd Number in <code>range</code></strong></summary>
+  The range statement normally works with two numbers, where it starts counting and where it ends. The two examples above show that the range statement can take a third number. This number tells <code>range</code> the amount to increment. Adding a <code>2</code> will mean that <code>range</code> counts by 2. Add a negative number and <code>range</code> will count down. In this case, be sure that the first number is larger than the second.
+</details>
   
 {Check It!|assessment}(multiple-choice-2984696218)

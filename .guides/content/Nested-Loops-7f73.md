@@ -11,7 +11,10 @@ for row in range(10):
     print("") # add new line character
 ```
 
-<details><summary>What does `end=""` mean?</summary>By default, the `print` function adds a new line character to whatever it prints to the console. By adding `end=""` to the print function, Python will not go to the next line. Notice, however, the last line of code is a `print` function without `end=""`. This will force the output to the next line.
+<details>
+  <summary><strong>What does <code>end=""</code> mean?</strong></summary>
+  By default, the <code>print</code> function adds a new line character to whatever it prints to the console. By adding <code>end=""</code> to the print function, Python will not go to the next line. Notice, however, the last line of code is a <code>print</code> function without <code>end=""</code>. This will force the output to the next line.
+</details><br>
 
 [Code Visualizer](open_tutor code/loops/playground-nested-loops.py)
 {Try it}(python3 code/loops/playground-nested-loops.py 1)
@@ -37,7 +40,11 @@ Using nested loops, write some code that outputs the following:
 
 [Code Visualizer](open_tutor code/loops/playground-nested-loops.py)
 {Try it}(python3 code/loops/playground-nested-loops.py 2)
-<details><summary>**Hint**</summary>The output is the same character (`#`). Make sure that your nested loops have the right numbers in the `range` statements to get the appropriate number of rows and columns.</details>
+
+<details>
+  <summary><strong>Hint</strong></summary>
+  The output is the same character (<code>#</code>). Make sure that your nested loops have the right numbers in the <code>range</code> statements to get the appropriate number of rows and columns.
+</details>
 
 ### Nested Loop Coding Challenge 2
 Using nested loops, write some code that outputs the following:
@@ -52,7 +59,11 @@ Using nested loops, write some code that outputs the following:
 
 [Code Visualizer](open_tutor code/loops/playground-nested-loops.py)
 {Try it}(python3 code/loops/playground-nested-loops.py 3)
-<details><summary>**Hint**</summary>The output is a `#` when the outer loop variable is even (0, 2, 4) and a `*` when the outer loop variable is odd (1, 3).</details>
+
+<details>
+  <summary><strong>Hint</strong></summary>
+  The output is a <code>#</code> when the outer loop variable is even (0, 2, 4) and a <code>*</code> when the outer loop variable is odd (1, 3).
+</details>
 
 ### Nested Loop Coding Challenge 3
 Using nested loops, write some code that outputs the following:
@@ -67,6 +78,10 @@ Using nested loops, write some code that outputs the following:
 
 [Code Visualizer](open_tutor code/loops/playground-nested-loops.py)
 {Try it}(python3 code/loops/playground-nested-loops.py 4)
-<details><summary>**Hint**</summary>First, the outer loop does not start with 0. Second, the inner loop runs the same amount of times as the row number. Third, think back to the unit on operators. There is an operator that can repeat a string.</details>
+
+<details>
+  <summary><strong>Hint</strong></summary>
+  First, the outer loop does not start with 0. Second, the inner loop runs the same amount of times as the row number. Third, think back to the unit on operators. There is an operator that can repeat a string.
+</details>
 
 {Check It!|assessment}(multiple-choice-3201003218)
